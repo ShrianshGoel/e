@@ -1,168 +1,41 @@
-
-
-
-
 <!DOCTYPE html>
-<html>
-<script>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Social Work</title>
+    <link rel="stylesheet" href="./style/style.css"></link>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Lobster&family=M+PLUS+Rounded+1c:wght@800&family=Montserrat:wght@800&family=Permanent+Marker&family=Poppins:wght@600&family=Rubik:wght@500&family=Space+Grotesk:wght@300&display=swap" rel="stylesheet">
 
-var s=0;
-function fu(){
-if(s===0){
-document.getElementById("ou").style.left="0%";
-document.getElementById("ou").style.width="100vw";
-document.getElementById("ou").style.height="100vh";
-s=1;
-}
-else{
-document.getElementById("ou").style.left="47.8%";
-document.getElementById("ou").style.width="52vw";
-s=0;
-}
-}
-function run(){
-var ht=document.getElementById("code").value;
-var js=document.getElementById("codejs").value;
-var out=document.getElementById("ou");
-out.contentDocument.body.innerHTML=ht;
-out.contentWindow.eval(js);
+</head>
+<body>
+    <!--Loading Header-->
+<div id="header">
+    <p>Loading</p>
+    <div id="loader"></div>
 
+</div>
 
-}
-function copy(){
-
-
-
-navigator.clipboard.writeText("fuck you");
-}
-</script>
-<style>
-body{
-background:#0f161a;
-display:flex;
-}
-textarea{
-background:transparent;
-border:2px solid white;
-outline:none;
-height:55vh;
-
-width:45vw;
-color:white;
-font-size:19px;
-font-weight:bold;
-}
-textarea::selection{
-background:crimson;
-}
-#codejs{
-position:Absolute;
-left:0.6%;
-top:60%;
-height:37vh;
-}
-#codejs::placeholder{
-color:white;
-opacity:0.9;
-}
-iframe{
-border:0px;
-z-index:1;
-position:Absolute;
-left:47.8%;
-top:0%;
-resize:both;
-
-height:100vh;
-width:52vw;
-}
-
-#full{
-width:40px;
-height:40px;
-text-align:center;
-font-size:22px;
-z-index:2;
-color:white;
-border:0px;
-line-height:2;
-font-family:sans-serif;
-font-weight:bold;
-background:teal;
-cursor:pointer;
-border-radius:100%;
-position:Absolute;
-box-shadow:0 0 10px #1a2324;
-top:1%;
-right:1%;
-transition:all 1.1s;
-}
-#full:hover{
-background:crimson;
-box-shadow:0 0 40px crimson, 0 0 80px crimson;
-transform:rotate(360deg);
-}
-#ru{
-width:40px;
-height:40px;
-text-align:center;
-font-size:27px;
-z-index:2;
-color:white;
-border:0px;
-line-height:1.5;
-font-family:sans-serif;
-font-weight:bold;
-background:teal;
-cursor:pointer;
-border-radius:100%;
-position:Absolute;
-box-shadow:0 0 10px #1a2324;
-top:1%;
-right:6%;
-
-transition:all 1.1s;
-}
-#ru:hover{
-background:crimson;
-box-shadow:0 0 40px crimson, 0 0 80px crimson;
-
-}
-#ru::before{
-content: '\25BA';
-}
-#co{
-width:40px;
-height:40px;
-text-align:center;
-font-size:27px;
-z-index:2;
-color:white;
-border:0px;
-line-height:1.5;
-font-family:sans-serif;
-font-weight:bold;
-background:teal;
-cursor:pointer;
-border-radius:100%;
-position:Absolute;
-box-shadow:0 0 10px #1a2324;
-top:1%;
-right:11%;
-background-image:url("https://o.remove.bg/downloads/cc616e90-fdab-41ed-91ba-a1ed073076e0/pngtree-vector-copy-icon-png-image_889395-removebg-preview.png");
-background-size:cover;
-transition:all 1.1s;
-}
-#co:hover{
-background-color:crimson;
-box-shadow:0 0 40px crimson, 0 0 80px crimson;
-
-}
-</style>
-<textarea onchange="run()" id="code"></textarea>
-<textarea onchange="run()" id="codejs" placeholder="Javascript code over here please"></textarea>
-<iframe id="ou" ></iframe>
-<div id="full" onclick="fu()">X</div>
-<div id="ru" onclick="run()"></div>
-<button id="co" onclick="copy()"></button>
+<!--Navbar-->
+<div id="nav"><p id="Logo">LOGO Name</p>
+<div id="hamburger"></div>
+<div id="menu">
+    <div id="line"></div>
+    <div id="close"><div></div></div>
+</div>
+</div>
+<!--Navbar Ends-->
+<img src="./style/Earth_from_Space.png"></img>
+<!--Loading Header Ends-->
+<!--Main Header-->
+<div id="mainheader">
+    <p id="world">One World</p>
+<p id="dream">One Dream</p>
+    <div id="cursor"></div>
+</div>
+<!--Main Header-->
+</body>
+<script src="./script.js"></script>
 </html>
