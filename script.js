@@ -66,7 +66,23 @@ else{
         cursor.style.height="93vh";
         cursor.style.background="rgba(255,255,255,0.12)";
         cursor.style.backdropFilter="blur(12px)";
-
-        document.querySelector("#world").pointerEvents="none";
+document.body.style.overflow="hidden";
+     document.querySelector("#bub").style.opacity="0";
+        document.querySelector("#world").style.pointerEvents="none";
        
+    });
+    document.addEventListener('scroll',function(){
+      if(window.scrollY>640){
+        document.querySelector("#about").style.borderRadius="0px";
+       
+      }
+      
+      else if(window.scrollY<640){
+     
+        document.querySelector("#about").style.borderTopLeftRadius="74%";
+        document.querySelector("#about").style.borderTopRightRadius="74%";
+        document.querySelector("#about").style.background="#6a6acb";
+      }
+      const cursor=document.querySelector("#cursor");
+      cursor.style.position="fixed";
     });

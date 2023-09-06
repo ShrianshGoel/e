@@ -13,10 +13,23 @@ font-family: 'Poppins', sans-serif;
 font-family: 'Rubik', sans-serif;
 font-family: 'Space Grotesk', sans-serif;
 */
+
+::-webkit-scrollbar{
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-thumb{
+    width: 12px;
+    border-radius: 22px;
+    background: #190722;
+}
+
+
 @import url("./Earth_from_Space.png");
 html{
     scroll-behavior: smooth;
-    overflow: hidden;
+    overflow-x: hidden;
 }
 body{
     width: 100vw;
@@ -50,13 +63,51 @@ body{
 
     position: relative;
 }
+#bub{
+    width: 100vw;
+    height: 100vh;
+    z-index:1;
+    
+}
+
+#bub span{
+    width: 3vw;
+    height: 3vw;
+    background:#6a6acb;
+ z-index: 2;
+border-radius: 100%; 
+margin-right: 12vh;
+display: inline-block;
+mix-blend-mode: multiply;
+box-shadow:0 0 12px #6a6acb,0 0 40px #6a6acb,0 0 20px #6a6acb;
+animation:animate calc(var(--i)/10*21s)  infinite;
+}
+#bub span:nth-child(even){
+    background: crimson;
+    box-shadow:0 0 12px crimson,0 0 40px crimson,0 0 20px crimson;
+}
+#bub span:last-of-type{
+    background-color: lightblue;
+    animation-duration: 12s;
+    box-shadow:0 0 12px lightblue,0 0 40px lightblue,0 0 20px lightblue ;
+}
+@keyframes animate {
+    0%{
+        
+        transform: translateY(100vh) scale(0.1);
+    }
+    100%{
+        transform: translateY(-25vh) scale(1);
+    }
+}
+
 #world{
     font-family: 'Rubik', sans-serif;
     font-size: 6.2rem;
     font-weight: bold;
     display: block;
 
-
+z-index: 2;
 
     text-transform: uppercase;
     color: #6a6acb;
@@ -75,7 +126,7 @@ cursor: pointer;
     font-size: 6.2rem;
     font-weight: bold;
     display: block;
-
+z-index:2;
 
     text-transform: uppercase;
   color: transparent;
@@ -90,10 +141,8 @@ cursor: pointer;
     transform: scale(0.98);
 }
 #dream:hover~#cursor{
-width: 23vh;
-transform: translateX(-40%);
-height: 23vh;
-background: transparent;
+transform: scale(3.3);
+background: black;
 border: 2px solid chartreuse;
 }
 #hamburger{
@@ -223,7 +272,7 @@ background: chartreuse;
     height: 5vh;
     background:white;
     border-radius: 100%;
-
+z-index: 2;
 }
 #nav{
     width: 100vw;
@@ -320,4 +369,18 @@ animation-timing-function: linear;
     100%{
         width: 110%;
     }
+}
+@media(max-width:900px) {
+    #menu{
+        width: 100vw;
+      left:90%;
+    }
+}
+#about{
+    width: 100vw;
+    background-color: #6a6acb;
+    height: 130vh;
+    transition: all 1.2s;
+    border-top-left-radius: 64%;
+    border-top-right-radius: 64%;
 }
