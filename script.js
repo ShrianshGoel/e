@@ -1,5 +1,5 @@
 var a=0;
-
+var s=0;
 
 
 setTimeout(()=>{
@@ -81,7 +81,30 @@ document.body.style.overflow="hidden";
      
         document.querySelector("#about").style.borderTopLeftRadius="74%";
         document.querySelector("#about").style.borderTopRightRadius="74%";
-        document.querySelector("#about").style.background="#6a6acb";
+         
+      }
+      if(window.scrollY>670){
+        const cursor=document.querySelector("#cursor");
+      cursor.style.left="67%";
+      cursor.style.top="62%";
+        cursor.style.transform="scale(7.2)";
+        cursor.style.borderRadius="7px";
+        cursor.style.width="5vw";
+        s=0;
+        document.querySelector("#why").style.height="80vh";
+      }
+      else{
+        const cursor=document.querySelector("#cursor");
+        cursor.style.left="20%";
+        cursor.style.top="auto";
+        
+        if(s===0){
+        cursor.style.transform="scale(1)";
+    s=1;    
+    }
+        cursor.style.borderRadius="100%";
+        cursor.style.width="5vh";
+        document.querySelector("#why").style.height="0vh";
       }
       const cursor=document.querySelector("#cursor");
       cursor.style.position="fixed";

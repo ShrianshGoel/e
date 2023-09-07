@@ -378,9 +378,22 @@ animation-timing-function: linear;
 }
 #about{
     width: 100vw;
-    background-color: #6a6acb;
+    background-color:  rgb(254, 159, 108);
     height: 130vh;
     transition: all 1.2s;
     border-top-left-radius: 64%;
     border-top-right-radius: 64%;
+}
+#why{
+    display: block;
+    transition: all 2.2s;
+    width:90vw;
+    height:0vh;
+    overflow: hidden;
+    color:black;
+    text-transform: uppercase;
+ font-family: 'Montserrat', sans-serif;
+ font-size: 14.8rem;
+ margin-top: 39vh;
+
 }
