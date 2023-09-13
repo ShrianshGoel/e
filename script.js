@@ -1,111 +1,48 @@
-var a=0;
-var s=0;
+var offsetX;
+var k=5;
+const backgrounde=document.querySelector("#mainheader");
+var colors=["black","lightblue","coral","#c5b9c4","steelblue"];
 
 
-setTimeout(()=>{
-document.querySelector("#header").style.opacity="0";
-document.body.overflowY="Scroll";
-document.querySelector("#header").style.width="0vw";
+const move=(e)=>{
+  document.querySelector(".card:nth-of-type("+k+")").style.left=e.clientX-offsetX+"px";
+};
+he();
+function he(){
+document.querySelector(".card:nth-of-type("+k+")").addEventListener('mousedown',function(e){
+offsetX=e.clientX-document.querySelector(".card:nth-of-type("+k+")").offsetLeft;
+document.addEventListener('mousemove',move);
+backgrounde.style.setProperty("--backheader",colors[k-1]);
+});}
+document.addEventListener('mouseup',function(){
+  document.querySelector(".card:nth-of-type("+k+")").style.left="-93vw";
+  document.querySelector(".card:nth-of-type("+k+")").style.transition="all 0.65s";
+  document.removeEventListener('mousemove',move);
 
-},14700);
-document.querySelector("#hamburger").addEventListener("click",function(){
-    if(a===0){
-const menu=document.querySelector("#menu");
-menu.style.left="17%";
-menu.style.boxShadow="7px 7px 100vh black,19px 19px 76vh 100vh black";
-a=1;
-}
-else{
-
-    const menu=document.querySelector("#menu");
-    menu.style.left="-40%";
-    menu.style.boxShadow="none";
-    a=0;
-}}
-);
-
-
-document.querySelector("#close").addEventListener("click",function(){
-    const menu=document.querySelector("#menu");
-    menu.style.left="-40%";
-    menu.style.boxShadow="none";
-    });
-    document.addEventListener("keydown",function(e){
-if(e.key==="Escape"){
-    const menu=document.querySelector("#menu");
-    menu.style.left="-40%";
-    menu.style.boxShadow="none";
-}
-if(e.key==="/"){
-    if(a===0){
-    const menu=document.querySelector("#menu");
-    menu.style.left="17%";
-    menu.style.boxShadow="7px 7px 100vh black,19px 19px 76vh 100vh black";
-    a=1;
-}
-else{
-    const menu=document.querySelector("#menu");
-    menu.style.left="-40%";
-    menu.style.boxShadow="none";
-    a=0;
-}
-}
-    });
-
-
-    document.getElementById("dream").addEventListener("click",function(){
-        const cursor=document.querySelector("#cursor");
-        cursor.style.transitionDelay="0s";
-        cursor.style.border="0px";
-        cursor.style.transform="";
-        cursor.style.boxShadow="-100vw 100vh 100vh 100vh black";
-        cursor.style.top="05%";
-        cursor.style.left="10%";
-        cursor.style.borderRadius="7px";
-        cursor.style.width="80vw";
-        cursor.style.height="93vh";
-        cursor.style.background="rgba(255,255,255,0.12)";
-        cursor.style.backdropFilter="blur(12px)";
-document.body.style.overflow="hidden";
-     document.querySelector("#bub").style.opacity="0";
-        document.querySelector("#world").style.pointerEvents="none";
-       
-    });
-    document.addEventListener('scroll',function(){
-      if(window.scrollY>640){
-        document.querySelector("#about").style.borderRadius="0px";
-       
-      }
-      
-      else if(window.scrollY<640){
-     
-        document.querySelector("#about").style.borderTopLeftRadius="74%";
-        document.querySelector("#about").style.borderTopRightRadius="74%";
-         
-      }
-      if(window.scrollY>670){
-        const cursor=document.querySelector("#cursor");
-      cursor.style.left="67%";
-      cursor.style.top="62%";
-        cursor.style.transform="scale(7.2)";
-        cursor.style.borderRadius="7px";
-        cursor.style.width="5vw";
-        s=0;
-        document.querySelector("#why").style.height="80vh";
-      }
-      else{
-        const cursor=document.querySelector("#cursor");
-        cursor.style.left="20%";
-        cursor.style.top="auto";
-        
-        if(s===0){
-        cursor.style.transform="scale(1)";
-    s=1;    
-    }
-        cursor.style.borderRadius="100%";
-        cursor.style.width="5vh";
-        document.querySelector("#why").style.height="0vh";
-      }
-      const cursor=document.querySelector("#cursor");
-      cursor.style.position="fixed";
-    });
+  if(k!=1){
+  k--;
+  he();
+  }
+  else{
+    setTimeout(function(){
+      document.querySelector(".card:nth-of-type(1)").style.left="60%";
+    },500);
+    
+    document.querySelector(".card:nth-of-type(2)").style.left="60%";
+    document.querySelector(".card:nth-of-type(3)").style.left="60%";
+    document.querySelector(".card:nth-of-type(4)").style.left="60%";
+    document.querySelector(".card:nth-of-type(5)").style.left="60%";
+k=5;
+  }
+});
+window.addEventListener('scroll',function(e){
+  if(window.scrollY>630){
+    document.querySelector("#about").style.borderRadius="0vh";
+    document.querySelector("#w").style.height="60vh";
+    document.querySelector("#w").style.width="90vw";
+  }
+  else{
+    document.querySelector("#w").style.height="0vh";
+    document.querySelector("#w").style.width="80vw";
+  }
+})
