@@ -45,4 +45,13 @@ window.addEventListener('scroll',function(e){
     document.querySelector("#w").style.height="0vh";
     document.querySelector("#w").style.width="80vw";
   }
-})
+});
+document.querySelector("#close").addEventListener('click',function(){
+const h=document.querySelector("#menu");
+h.style.left="-160%";
+});
+document.querySelector("#hamburger").addEventListener('click',function(){
+  const h=document.querySelector("#menu");
+  h.style.left="3%";
+  h.style.boxShadow="20px 20px 60vh black";
+  });

@@ -120,10 +120,14 @@
   .card:last-of-type{
     transform: rotate(5deg);
   }
+  ::selection{
+    background: none;
+  }
   #text{
     display: block;
     width:40vw;
     height:20vh;
+    pointer-events: none;
     color:white;
     font-family: 'Rubik',sans-serif;
     text-transform: uppercase;
@@ -251,4 +255,79 @@ animation:animate calc(var(--i)/10*21s)  infinite;
     100%{
         transform: translateY(-65vh) scale(1);
     }
+}
+#menu{
+  width: 35vw;
+  height: 94vh;
+  position: fixed;
+  top:3%;
+  left:3%;
+  background: white;
+  overflow: hidden;
+  border-radius: 22px;
+  z-index: 9;
+  transition: all 1.2s;
+}
+#menu::after{
+  content: "";
+  width:0.2%;
+  height: 100%;
+  position: absolute;
+  right:10%;
+  background: black;
+}
+
+#close{
+  position: absolute;
+  top:0%;
+  cursor: pointer;
+  right:0%;
+  z-index: 9;
+  width:10%;
+  height:5vh;
+border-bottom: 1px solid black;
+}
+#close::after{
+  content: "";
+  position: absolute;
+  transition: all .5s;
+left: 29%;
+cursor: pointer;
+top:39%;
+  width: 17%;
+  height: 6%;
+transform: rotate(47deg);
+  background: black;
+  border-radius: 22px;
+
+}
+#line{
+  position: absolute;
+  transition: all .5s;
+left: 45.3%;
+cursor: pointer;
+top:62.4%;
+  width: 17%;
+  height: 6%;
+transform: rotate(47deg);
+  background: black;
+  border-radius: 22px;
+
+}
+#close::before{
+  content: "";
+  position: absolute;
+left: 26%;
+top:50%;
+  width: 39%;
+  transition: all .5s;
+  cursor: pointer;
+  height: 6%;
+transform: rotate(-47deg);
+  background: black;
+  border-radius: 42px;
+
+}
+#close:hover::after,#close:hover::before{
+  background: chartreuse;
 }
