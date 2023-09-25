@@ -1,5 +1,6 @@
 var offsetX;
 var k=5;
+var men=0;
 const backgrounde=document.querySelector("#mainheader");
 var colors=["black","lightblue","coral","#c5b9c4","steelblue"];
 
@@ -47,11 +48,32 @@ window.addEventListener('scroll',function(e){
   }
 });
 document.querySelector("#close").addEventListener('click',function(){
+  if(men===1){
 const h=document.querySelector("#menu");
 h.style.left="-160%";
-});
+men=0;
+}});
 document.querySelector("#hamburger").addEventListener('click',function(){
+  if(men===0){
   const h=document.querySelector("#menu");
   h.style.left="3%";
   h.style.boxShadow="20px 20px 60vh black";
+  men=1;
+  }});
+  document.addEventListener('keyup',function(e){
+    console.log(e);
+    if(e.key==="/"){
+
+        const h=document.querySelector("#menu");
+        h.style.left="3%";
+        men=1;
+      
+    }
+    if(e.key==="Escape"){
+
+        const h=document.querySelector("#menu");
+        h.style.left="-160%";
+        men=0;
+   
+    }
   });
