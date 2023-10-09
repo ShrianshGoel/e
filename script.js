@@ -39,7 +39,8 @@ k=5;
 window.addEventListener('scroll',function(e){
   if(window.scrollY>630){
     document.querySelector("#about").style.borderRadius="0vh";
-    document.querySelector("#w").style.height="60vh";
+    document.querySelector("#w").style.height
+      ="70vh";
     document.querySelector("#w").style.width="90vw";
   }
   else{
@@ -77,3 +78,9 @@ document.querySelector("#hamburger").addEventListener('click',function(){
    
     }
   });
+document.querySelector("#translate").addEventListener('click',function(){
+document.querySelector("input").placeholder="नाम दाले";
+  document.querySelector("input:last-of-type").placeholder="इमेल दाले";
+  document.querySelector("textarea").placeholder="अपनी स्थिथि बताये";
+  document.querySelector("#submit").innerHTML="फ़ोरम सबमित करे";
+});
