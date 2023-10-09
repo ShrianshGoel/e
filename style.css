@@ -1,3 +1,23 @@
+#translate{
+    width:10vh;
+    height:10vh;
+    background:lightblue;
+    border-radius:100%;
+    position:fixed;
+    top:30%;
+    left:6%;
+    cursor:pointer;
+    z-index:22;
+    text-align:center;
+    line-height:10vh;
+font-family:'Rubik',sans-serif;
+    font-size:1.8rem;
+    font-weight:bold;
+    transition:all 0.4s;
+  }
+  #translate:active{
+    transform:scale(0.9);
+  }
 *{
     margin: 0px;
     padding:0px;
@@ -368,6 +388,9 @@ transform: rotate(-47deg);
   background: linear-gradient(to top, #30344c, rgb(22, 47, 58)); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   
 }
+  .cardperson:nth-of-type(2){
+    background:linear-gradient(45deg,cyan,teal);
+  }
 .cardperson::after{
 content: "";
 position: absolute;
@@ -379,3 +402,82 @@ background-color: white;
 border-radius: 100%;
 box-shadow: 20px 20px 90px #1d121d,30px 30px 110px #1d1d1d ;
 }
+#contact{
+width:100vw;
+height:90vh;
+background:black;
+flex-wrap:wrap;
+position:relative;
+display:flex;
+justify-content:center;
+}
+input{
+color:white;
+font-family:'Rubik',sans-serif;
+color:white;
+font-weight:bold;
+font-size:1.3rem;
+padding:12px;
+background:transparent;
+border-radius:19px;
+border:3px solid #6a6acb;
+width:70vw;
+height:10vh;
+}
+textarea{
+color:white;
+font-family:'Rubik',sans-serif;
+color:white;
+font-weight:bold;
+font-size:1.3rem;
+padding:12px;
+background:transparent;
+border-radius:19px;
+border:3px solid #6a6acb;
+width:70vw;
+height:50vh;
+}
+
+input:last-of-type{
+
+}
+::placeholder{
+color:white;
+}
+#submit{
+color:white;
+font-family:'Rubik',sans-serif;
+color:white;
+font-weight:bold;
+font-size:1.3rem;
+padding:12px;
+background:#6a6acb;
+border-radius:19px;
+border:3px solid #6a6acb;
+width:70vw;
+height:10vh;
+text-align:Center;
+cursor:pointer;
+}
+  .cardperson p{
+    margin-right:32px;
+    margin-top:73%;
+    color:white;
+    font-family:'Rubik',sans-serif;
+color:white;
+    mix-blend-mode:difference;
+font-weight:bold;
+font-size:1.3rem;
+    text-transform:capitalize;
+  }
+    .cardperson:nth-of-type(2) p{
+    margin-right:32px;
+    margin-top:73%;
+    color:black;
+    font-family:'Rubik',sans-serif;
+color:white;
+
+font-weight:bold;
+font-size:1.3rem;
+    text-transform:capitalize;
+  }
