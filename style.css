@@ -9,7 +9,7 @@ input{
     mix-blend-mode:difference;
       position:fixed;
       top:30%;
-      left:6%;
+      left:2%;
       cursor:pointer;
       z-index:22;
       text-align:center;
@@ -18,10 +18,92 @@ input{
       font-size:1.8rem;
       font-weight:bold;
       transition:all 0.4s;
+      overflow: hidden;
     }
-    #translate:active{
-      transform:scale(0.9);
+
+    #translate::after{
+        content: "";
+        position: absolute;
+        left:-110%;
+        width:100%;
+        transition: all 0.5s;
+        height: 100%;
+        background: crimson;
+        border-radius: 100%;
     }
+    #translate::before{
+        content: "";
+        position: absolute;
+        left:-180%;
+        width:100%;
+        height: 100%;
+        background:blue;
+        border-radius: 100%;
+        transition: all 1.2s;
+    }
+    #translate:hover::after{
+        left:110%;
+    }
+    #translate:hover::before{
+        left:110%;
+    }
+    #face{
+        width:10vh;
+        height:10vh;
+        background:lightblue;
+        border-radius:100%;
+      mix-blend-mode:difference;
+        position:fixed;
+        top:42%;
+        left:2%;
+        cursor:pointer;
+        z-index:22;
+        text-align:center;
+        line-height:10vh;
+    font-family:'Rubik',sans-serif;
+        font-size:1.8rem;
+        font-weight:bold;
+        transition:all 0.4s;
+      }
+      #call{
+        width:10vh;
+        height:10vh;
+        background:lightblue;
+        border-radius:100%;
+      mix-blend-mode:difference;
+        position:fixed;
+        top:54%;
+        left:2%;
+        cursor:pointer;
+        z-index:22;
+        text-align:center;
+        line-height:10vh;
+    font-family:'Rubik',sans-serif;
+        font-size:1.8rem;
+        font-weight:bold;
+        overflow: hidden;
+        transition:all 0.4s;
+      }
+      #call::after{
+        content: "";
+        position: absolute;
+        top:0%;
+        left: -40%;
+    width:30%;
+    height: 100%;
+    transition:all 0.4s;
+        background: white;
+        transform: skew(30deg);
+      }
+      #call:hover::after{
+        left: 110%;
+      }
+    #translate:hover{
+      transform:scale(0.96);
+    }
+    #face:hover{
+        transform:rotate(360deg);
+      }
   *{
       margin: 0px;
       padding:0px;
@@ -115,10 +197,12 @@ input{
   
       --backheader:black;
       width: 100vw;
-      height:100vh;
+      height:110vh;
       background:var(--backheader);
       position: relative;
       transition: all 1.2s;
+      border-bottom-left-radius:20% ;
+      border-bottom-right-radius:20% ;
     }
     .card{
       width: 65vh;
@@ -152,6 +236,14 @@ input{
     ::selection{
       background: none;
     }
+    #call a{
+        display: block;
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top:0%;
+        left: 0%;
+    }
     #text{
       display: block;
       width:40vw;
@@ -165,7 +257,7 @@ input{
       line-height: 10vh;
       text-align: center;
       position: absolute;
-      left:5%;
+      left:7%;
   top:40%;
   
     }
@@ -184,9 +276,7 @@ input{
       #nav{
           width:97vw;
       }
-      #hamburger::after{
-  
-      }
+
   
     }
     @media(max-width:640px){
@@ -283,7 +373,7 @@ input{
   border-radius: 100%; 
   margin-right: 12vh;
   display: inline-block;
-  
+  mix-blend-mode:exclusion;
   box-shadow:0 0 12px #6a6acb,0 0 40px #6a6acb,0 0 20px #6a6acb;
   animation:animate calc(var(--i)/10*21s)  infinite;
   }
@@ -483,9 +573,7 @@ input{
   height:50vh;
   }
   
-  input:last-of-type{
-  
-  }
+
   ::placeholder{
   color:white;
   }
