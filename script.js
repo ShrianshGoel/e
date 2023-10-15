@@ -1,6 +1,7 @@
 var offsetX;
 var k=5;
 var men=0;
+var h=5;
 const backgrounde=document.querySelector("#mainheader");
 var colors=["black","lightblue","coral","#c5b9c4","steelblue"];
 
@@ -98,3 +99,19 @@ window.addEventListener('resize',function(){
     canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
 });
+
+setInterval(()=>{
+    if(h<6&&h>0){
+    document.querySelector(".card:nth-of-type("+h+")").style.left="-70%";
+    document.querySelector(".card:nth-of-type("+h+")").style.transition="all 0.6s";
+console.log("works");
+        --h;
+    }
+    else{
+        document.querySelectorAll(".card").forEach((e)=>{
+          e.style.left="60%";
+          document.querySelector(".card:nth-of-type("+h+")").style.transition="all 0s";
+        });
+        h=5;
+    }
+},3800);
