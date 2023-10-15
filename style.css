@@ -333,14 +333,14 @@ input{
     }
     #sec{
       width: 90vh;
-      height:30vh;
+      height:34vh;
          color: white;
       font-family: 'M PLUS Rounded 1c', sans-serif;
       font-size: 1.1rem;
       font-weight: bold;
       position: absolute;
-      top:143%;
-      left:48%;
+      top:146%;
+      left:49%;
   cursor:pointer;
       z-index: 25;
       overflow: scroll;
