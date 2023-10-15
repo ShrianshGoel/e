@@ -216,7 +216,7 @@ window.addEventListener('resize',function(){
 canvas.height=window.innerHeight;
 });
 
-setInterval(()=>{
+setTimeout(()=>{
     if(h<6&&h>0){
     document.querySelector(".card:nth-of-type("+h+")").style.left="-70%";
     document.querySelector(".card:nth-of-type("+h+")").style.transition="all 0.6s";
