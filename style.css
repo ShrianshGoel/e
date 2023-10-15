@@ -123,7 +123,8 @@ font-family:'Rubik',sans-serif;
    top:25%;
    cursor: grab;
    left:60%;
-   transition: all 0.3s;
+   transition: all 0.1s;
+
   }
   .card:active{
     cursor:grabbing;
@@ -297,7 +298,7 @@ animation:animate calc(var(--i)/10*21s)  infinite;
   overflow: hidden;
   border-radius: 12px;
   z-index: 9;
-  transition: all 1.2s;
+  transition: all 0.8s;
 }
 #menu::after{
   content: "";
