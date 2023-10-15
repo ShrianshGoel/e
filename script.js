@@ -216,18 +216,3 @@ window.addEventListener('resize',function(){
 canvas.height=window.innerHeight;
 });
 
-setTimeout(()=>{
-    if(h<6&&h>0){
-    document.querySelector(".card:nth-of-type("+h+")").style.left="-70%";
-    document.querySelector(".card:nth-of-type("+h+")").style.transition="all 0.6s";
-console.log("works");
-        --h;
-    }
-    else{
-        document.querySelectorAll(".card").forEach((e)=>{
-          e.style.left="60%";
-          document.querySelector(".card:nth-of-type("+h+")").style.transition="all 0s";
-        });
-        h=5;
-    }
-},3800);
