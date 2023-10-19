@@ -279,38 +279,8 @@ input{
 
   
     }
-    @media(max-width:640px){
-      .card{
-          width: 36vh;
-          height: 36vh;
-          top:34%;
-          left:16%;
-      }
-      .cardpanel{
-        flex-flow: column;
-      }
-      .cardperson::after{
-        left:19%;
-        top:9%;
-        transform: scale(0.9);
-      }
-      #text{
-          font-size: 2.1rem;
-          width: 100vw;
-          transform: translateX(-34%);
-      }
-    }
-    #about{
-      width: 100vw;
-      height: 130vh;
-      background:transparent;
-      z-index:2;
-  border-top-right-radius:60% ;
-      position: absolute;
-      top:100%;
-  border-top-left-radius:60% ;
-  transition: all 1.2s;
-    }
+
+
     #w{
       width:90vw;
       position:absolute;
@@ -594,6 +564,7 @@ input{
   }
     .cardperson p{
       margin-left:15%;
+      
       margin-top:73%;
       color:white;
       font-family:'Rubik',sans-serif;
@@ -603,6 +574,9 @@ input{
   font-size:1.3rem;
       text-transform:capitalize;
     }
+.card{
+  border:2px solid whit;
+}
       .cardperson:nth-of-type(2) p{
       margin-right:32px;
       margin-top:73%;
@@ -613,4 +587,54 @@ input{
   font-weight:bold;
   font-size:1.3rem;
       text-transform:capitalize;
+    }
+    @media(max-width:640px){
+      .card{
+          width: 36vh;
+          height: 36vh;
+        border:2px solid white;
+          top:24%;
+          left:18.5%;
+      }
+      .cardpanel{
+        flex-flow: column;
+      }
+      .cardperson::after{
+        left:19%;
+        top:9%;
+        transform: scale(0.9);
+      }
+      #text{
+          font-size: 2.1rem;
+          width: 100vw;
+          transform: translateX(-34%) translateY(-174%);
+      }
+   #w{
+      width:90vw;
+      position:absolute;
+      top:60%;
+      height:0vh;
+      transition: all 3.2s;
+      margin-top: 44vh;
+   
+      text-transform: uppercase;
+      margin-left: 5vh;
+      overflow: hidden;
+      color: white;
+      font-family: 'Montserrat', sans-serif;
+      mix-blend-mode: difference;
+  font-size: 7rem;
+      position:absolute;
+    }
+      #sec{
+        height:50vh;
+        width:70vh;
+        left:1.5%;
+        top:170%;
+      }
+      .cardperson{
+        width:90vh;
+        height:30vh;
+      }
+      
     }
