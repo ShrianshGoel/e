@@ -487,13 +487,13 @@ input{
     width: 40vh;
     height:60vh;
     cursor: pointer;
-    transition: all 3.2s;
+    transition: all 0.7s;
     background:white;
     position: relative;
     border-radius:12px;
   }
   .cardperson:hover{
-    filter: hue-rotate(110deg);
+    transform:translateY(-5%);
   }
   .cardperson:first-of-type{
   
@@ -510,7 +510,10 @@ input{
   left:25%;
   width:20vh;
   height: 20vh;
-  background-color: white;
+  background: var(--url);
+    background-size:cover;
+    backgroun-repeat:no-repeat;
+    background-position:center;
   border-radius: 100%;
   box-shadow: 20px 20px 90px #1d121d,30px 30px 110px #1d1d1d ;
   }
