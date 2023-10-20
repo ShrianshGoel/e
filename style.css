@@ -596,6 +596,7 @@ input{
         border:2px solid white;
           top:24%;
           left:18.5%;
+        --left:18.5%;
       }
       .cardpanel{
         flex-flow: column;
@@ -617,7 +618,7 @@ input{
       height:0vh;
       transition: all 3.2s;
       margin-top: 44vh;
-   
+   left:-5%;
       text-transform: uppercase;
       margin-left: 5vh;
       overflow: hidden;
@@ -628,10 +629,10 @@ input{
       position:absolute;
     }
       #sec{
-        height:58vh;
+        height:65%;
         width:90%;
         left:1.5%;
-        top:172%;
+        top:179.6%;
       }
       .cardperson{
         width:97%;
@@ -654,7 +655,7 @@ input{
           textarea{
         width:95%;
       }
-      button{
+      #submit{
                width:95%; 
         
       }
