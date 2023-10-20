@@ -158,6 +158,12 @@ input{
       transition: all 1.2s;
       margin-left:1.4vw;
       outline: none;
+      width:8vh;
+      margin-top:1.9px;
+      height:8vh;
+      border-radius:100%;
+      background:url("https://github.com/ShrianshGoel/e/blob/main/thumbnail_IMG-20230402-WA0000.jpg?raw=true");
+      background-size:cover;
     }
     #hamburger{
       position: relative;
