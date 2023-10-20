@@ -3,6 +3,7 @@ input{
   }
   #translate{
       width:10vh;
+    
       height:10vh;
       background:lightblue;
       border-radius:100%;
@@ -627,14 +628,34 @@ input{
       position:absolute;
     }
       #sec{
-        height:50vh;
-        width:70vh;
+        height:58vh;
+        width:90%;
         left:1.5%;
-        top:170%;
+        top:172%;
       }
       .cardperson{
-        width:90vh;
+        width:97%;
         height:30vh;
+        border-radius:32px;
       }
-      
+  
+      .cardperson::after{
+        left:3%;
+      }
+      #contact{
+        height:100vh;
+      }
+      input:first-of-type{
+        margin-top:9vh;
+      }
+      input{
+        width:95%;
+      }
+          textarea{
+        width:95%;
+      }
+      button{
+               width:95%; 
+        
+      }
     }
