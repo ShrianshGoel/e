@@ -158,9 +158,9 @@ input{
       transition: all 1.2s;
       margin-left:1.4vw;
       outline: none;
-      width:8vh;
-      margin-top:1.9px;
-      height:8vh;
+      width:10vh;
+      margin-top:3.9px;
+      height:10vh;
       border-radius:100%;
       background:url("https://github.com/ShrianshGoel/e/blob/main/thumbnail_IMG-20230402-WA0000.jpg?raw=true");
       background-size:cover;
@@ -552,7 +552,45 @@ input{
   width:70vw;
   height:50vh;
   }
-  
+#menu p:first-of-type{
+  display:inline-block;
+  margin-left:5%;
+    margin-top:3%;
+  font-size:4.7rem;
+  border-radius:7px;
+  color:black;
+  font-weight:bold;
+width:9vh;
+  background:chartreuse;
+      font-family: 'Montserrat', sans-serif;
+  cursor:pointer;
+  transition:all 0.4s;
+}
+#menu p{
+  display:inline-block;
+  margin-left:5%;
+    margin-top:6%;
+  font-size:4.7rem;
+  border-radius:7px;
+  color:black;
+  font-weight:bold;
+  position:absolute;
+  top:var(--top);
+width:9vh;
+
+  color-blend-mode:difference;
+      font-family: 'Montserrat', sans-serif;
+  cursor:pointer;
+  transition:all 0.4s;
+}
+#menu p:first-of-type:hover{
+width:39vh;
+  text-shadow:0px;
+}
+#menu p:hover{
+transform:translate(5%,5%);
+}
+
 
   ::placeholder{
   color:white;
@@ -643,11 +681,7 @@ input{
         left:1.5%;
         top:179.6%;
       }
-      .cardperson{
-        width:97%;
-        height:30vh;
-        border-radius:32px;
-      }
+   
   
       .cardperson::after{
         left:3%;
@@ -675,6 +709,9 @@ input{
   left:-132%;
         transform:translateX(-3%);
       }    
+      #menu p{
+        font-size:3.4rem;
+      }
       .cardperson p{
         margin-top:3%;
         margin-left:43%;
@@ -684,5 +721,10 @@ input{
        margin-top:3%;
         margin-left:43%;
         margin-bottom:none;
+      }
+         .cardperson{
+        width:97%;
+        height:60vh;
+        border-radius:32px;
       }
 }
