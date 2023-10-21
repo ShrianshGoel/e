@@ -93,3 +93,8 @@ const canvas=document.querySelector("#c");
 const c=canvas.getContext('2d');
 canvas.width=window.innerWidth;
 canvas.height=window.innerHeight;
+function clos(){
+  const h=document.querySelector("#menu");
+h.style.left="-160%";
+men=0;
+}
