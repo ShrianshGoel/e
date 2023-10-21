@@ -651,6 +651,8 @@ input{
   
       .cardperson::after{
         left:3%;
+        top:2%;
+        transform:scale(0.8);
       }
       #contact{
         height:100vh;
@@ -673,4 +675,14 @@ input{
   left:-132%;
         transform:translateX(-3%);
       }    
+      .cardperson p{
+        margin-top:3%;
+        margin-left:43%;
+        margin-bottom:none;
+      }
+  .cardperson:nth-of-type(2) p{
+       margin-top:3%;
+        margin-left:43%;
+        margin-bottom:none;
+      }
 }
